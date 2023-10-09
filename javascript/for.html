@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+</head>
+<body>
+    <script>
+        // 语法：
+        // for (from ; to; change) {
+        //     todo
+        // }
+
+        function log(x) {
+            document.write("<p>" + x +"</p>")
+        }
+
+        // let sum=0
+        // for (let i=1; i<=100; i++) {
+        //     if (i%3 == 0 || i%7 == 0) {
+        //         sum += i;
+        //         log(i + "," + sum);
+
+        //     }
+        // }
+
+        // 语法
+        // from;
+        // while (to) {
+        //     todo;
+        //     change;
+        // }
+
+        let sum=0
+        let i=1;
+        while (i <= 100) {
+            sum += i;
+            log(i + ',' + sum)
+            i++;
+        }
+
+        // 语法
+        // from;
+        // do {
+        //     todo;
+        //     change;
+        // }while (to);
+
+        let SUM=0
+        let j=1;
+        do {
+            SUM += j;
+            log(j + ',' + SUM);
+            j++;
+        }while (j <= 100);
+
+    </script>
+    
+</body>
+</html>

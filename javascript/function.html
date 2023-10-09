@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function 函数</title>
+</head>
+<body>
+    <script>
+        function log(x){
+            document.write('<p>' + x + '</p>')
+        }
+
+        // 1. 函数定义
+        function square(x) {
+            return x * x;
+        }
+
+        // function max(a, b) {
+        //     return a > b ? a : b
+        // }
+
+        function max() {
+            let max=arguments[0];
+            for (let i=0; i<arguments.length; i++) {
+                if (max < arguments[i]){
+                    max = arguments[i]
+                    
+                }
+            }
+        }
+
+        function min(a, b) {
+            return a < b ? a : b
+        }
+        
+        function abs(a) {
+            return a < 0 ? -a : a;
+        }
+        // 1. 函数调用
+        let y = square(10);
+        log(y);
+
+        y = max(100, 101);
+        log(y)
+
+        y = min(100, 101);
+        log(y)
+
+        a = abs(-1555);
+        log(a)
+    </script>
+</body>
+</html>

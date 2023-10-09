@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 数组</title>
+</head>
+<body>
+    <script>
+        function log(x) {
+            document.write('<p>' + x + '</p>')
+        }
+        // 1.标准的定义方式
+        // let a1 = new Array();
+        // 2.数组符号【】
+        let a1 = [];
+        a1[0] = 1;
+        a1[1] = 2;
+        a1[2] = 3;
+        a1[3] = 4;
+        a1[10] = 99999;
+
+        log(a1.length);
+        log(a1[5])
+
+        // 3.数组的初始化
+        let a2 = new Array(1, 2, 3, 4, 5, 6, );
+        log(a2);
+
+        let a3 = [2,4,6,8,10,12];
+        log(a3);
+
+        // 4. 遍历数组
+        let a = [1, 2, 3, 4];
+        a[9]=0
+        a[10]=11
+
+        // 4.1 for
+        for (let i=0; i<a.length; i++) {
+            log(a[i]); //{a[0],a[1],...,a[i],...,a[n-1] }
+        }
+
+        // 4.2 for-in i-下标，会忽略未定义元素
+        for (let i in a) {
+            log(a[i]);
+        }
+
+        // 4.3 for-of x-元素值
+        for (let x of a) {
+            log(x);
+        }
+
+        // 5.求和
+        let b =[12,52,51,82,77];
+        let sum=0;
+
+        for (let x of b) {
+            sum += x;
+        }
+
+        log('sum='+ sum);
+
+        // 6. 平均值 average - avg
+        let avg =sum / b.length;
+        log('avg=' + avg);
+
+        // 7.最大值 max
+        let max=b[0];
+
+        for (let i in b) {
+            if (max < b[i]) {
+                max = b[i];
+            }
+        }
+        log('max=' + max);
+
+        // 8. 最小值 min
+        let min=b[0];
+
+        for (let i in b) {
+            if (min > b[i]) {
+                min = b[i];
+            }
+        }
+        log('min=' + min);
+
+        // 9. 查找 find
+        let y=37;
+        let i=-1;
+        for (let j in b) {
+            if (b[i] == y) {
+                i == j
+                break;
+            }
+
+        }
+        log('i=' + i);
+
+        // 10. push/pop
+        log(b);
+        b.push(10000);
+        log(b);
+        b.unshift(-100);
+        log(b);
+
+        function compare(a, b) {
+            return a - b;
+        }
+        b.sort(compare);
+        log(b);
+        b.splice(4, 0, 1111, 2222, 3333, 4444);
+        log(b);
+
+        let index = b.indexOf(82);
+        log(index);
+        b.splice(index, 1, 10000);
+        log(b);
+        
+
+
+    </script>
+</body>
+</html>

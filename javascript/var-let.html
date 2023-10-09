@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var/let</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function log(x) {
+            document.write("<p>" + x + "</p>");
+
+        }
+
+
+       
+    
+    {    
+        var va = 100;
+        let la = "hello";
+        const ca ="常量"
+
+        // ca += 123   //常量不允许修改
+        va += 10;     // va =va + 10;
+        la += 123;    // la = la + 123 = "hello123";
+
+        log(ca);
+        log(la);
+    }
+
+        log(va);
+   
+  
+
+        let u;   // 未定义 undefined
+
+        u = 123456;   // definen 赋值
+        
+        u = null;
+
+        u += 100;
+
+        console.log(u);
+
+    </script>
+    
+</body>
+</html>

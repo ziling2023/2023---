@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object 对象</Object></title>
+</head>
+<body>
+    <script>
+        function log(x) {
+            document.write('<p>' + x + '</p>')
+        }
+        // 1. 创建对象
+        // 1.1 标准创建
+        // let person = new Object();
+        // 1.2 简化版
+        let person = {};
+        person.id = "xxxxxx20000202xxx";
+        person.name = "张三";
+        person.genda = "男";
+        person.birthday = "20000202";
+        person.address = "浙江杭州xxxxx";
+        person.image = "xxxxx.jpg";
+        log(person.id);
+        log(person.name);
+
+        // 2. 创建并初始化
+        let lisi = {
+            id: "xxxxx20100101xxxx",
+            name: "李四",
+            genda: "女",
+            birthday: "2010.01.01",
+            
+        }
+    </script>
+</body>
+</html>
